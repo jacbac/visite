@@ -1,130 +1,225 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Anneaux de la Mémoire &middot; Visite</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Template de visite de ville">
-    <meta name="author" content="Anneaux de la Mémoire, Jacques Bachelier">
+<head>
+  <meta charset="utf-8">
+  <title>Anneaux de la Mémoire &middot; Visite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Template de visite de ville">
+  <meta name="author" content="Anneaux de la Mémoire, Jacques Bachelier">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 40px;
-      }
+  <!-- Le styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
 
-      /* Custom container */
-      .container-narrow {
-        margin: 0 auto;
-        max-width: 700px;
-      }
-      .container-narrow > hr {
-        margin: 30px 0;
-      }
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+  <![endif]-->
 
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 60px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 72px;
-        line-height: 1;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="ico/favicon.png">
+</head>
 
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+<body>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
+  <div class="container-narrow">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Accueil</a></li>
+        <li><a href="#">A Propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <h3 class="muted">Projet Visite 0.1</h3>
+    </div>
+    <hr>
+    <div class="jumbotron">
+      <h1>Sur les traces de Nantes, port négrier</h1>
+      <p class="lead">Un iténaire témoin à travers l'architecture nantaise</p>
+    </div>
+    <hr>
+    <p>Sed ullamcorper consequat adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris nunc, hendrerit ultrices aliquet vitae, scelerisque eget dui. Duis dictum lacinia arcu iaculis varius. Aenean lobortis ultrices lorem ut suscipit. Nunc gravida ipsum eu mi mattis viverra. Nam a leo orci. Vivamus non erat at tellus vulputate tempus in et purus.</p>
+    <hr>
+  </div> <!-- /container-narrow -->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="ico/favicon.png">
+  <div class="container">
 
-  </head>
+    <div class="map">
+      <div id="big-map" class="gmap-big"></div>
+    </div>
 
-  <body>
-
-    <div class="container-narrow">
-
-      <div class="masthead">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <h3 class="muted">Project name</h3>
+    <div class="row-fluid marketing">
+      <div class="etape">
+        <div class="span4">
+          <h4>Le Grand Blottereau 1742-1749</h4>
+          <p>Doulon - Boulevard Auguste-Peneau</p>
+          <p>Ligne de bus 12 - Arrêt "Grand Blottereau"</p>
+          <div class="map">
+            <div id="mini-map_01" class="gmap-mini"></div>
+          </div>
+        </div>
+        <div class="span8">
+          <p>Sed ullamcorper consequat adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris nunc, hendrerit ultrices aliquet vitae, scelerisque eget dui. Duis dictum lacinia arcu iaculis varius. Aenean lobortis ultrices lorem ut suscipit. Nunc gravida ipsum eu mi mattis viverra. Nam a leo orci. Vivamus non erat at tellus vulputate tempus in et purus.</p>
+          <img src="img/city-q-c-640-480-6.jpg" class="img-polaroid">
+        </div>
       </div>
 
-      <hr>
+      <hr />
 
-      <div class="jumbotron">
-        <h1>Super awesome marketing speak!</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <a class="btn btn-large btn-success" href="#">Sign up today</a>
+      <div class="etape">
+        <div class="span4">
+          <h4>Stèle au cimétière de la Bouteillerie</h4>
+          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+          <div class="map">
+            <div id="mini-map_02" class="gmap-mini"></div>
+          </div>
+        </div>
+        <div class="span8">
+          <p>Sed ullamcorper consequat adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris nunc, hendrerit ultrices aliquet vitae, scelerisque eget dui. Duis dictum lacinia arcu iaculis varius. Aenean lobortis ultrices lorem ut suscipit. Nunc gravida ipsum eu mi mattis viverra. Nam a leo orci. Vivamus non erat at tellus vulputate tempus in et purus.</p>
+          <img src="img/city-q-c-640-480-6.jpg" class="img-polaroid">
+        </div>
       </div>
 
-      <hr>
+      <hr />
 
-      <div class="row-fluid marketing">
+      <div class="etape">
         <div class="span4">
           <h4>Subheading</h4>
           <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+          <div class="map">
+            <div id="mini-map_03" class="gmap-mini"></div>
+          </div>
         </div>
 
         <div class="span8">
           <h4>Subheading</h4>
-          <p></p>
+          <p>Sed ullamcorper consequat adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris nunc, hendrerit ultrices aliquet vitae, scelerisque eget dui. Duis dictum lacinia arcu iaculis varius. Aenean lobortis ultrices lorem ut suscipit. Nunc gravida ipsum eu mi mattis viverra. Nam a leo orci. Vivamus non erat at tellus vulputate tempus in et purus.</p>
           <img src="img/city-q-c-640-480-6.jpg" class="img-polaroid">
-          
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
       </div>
+    </div>
 
-      <hr>
+    <hr>
 
-      <div class="footer">
-        <p>&copy; Company 2013</p>
-      </div>
+    <div class="footer">
+      <p>Test Co. 2013</p>
+    </div>
 
-    </div> <!-- /container -->
+  </div> <!-- /container -->
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsYVD-Nocke8NkyXK0KEKYESXlQump6Kk&sensor=false"></script>
+  <script src="js/vendor/gmap-0.3.2.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
 
-  </body>
+    /**
+     * Big Intro Map with Pointers
+     */
+     var bigMap = new GMaps({
+        div: '#big-map',
+        lat: 47.212933,
+        lng: -1.556652,
+        zoom: 14,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+      bigMap.addMarker({
+        lat: 51.503324,
+        lng: -0.119543,
+        title: 'London Eye',
+        infoWindow: {
+          content: '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames in London, England. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.5007396,
+        lng: -0.1245299,
+        title: 'Big Ben',
+        infoWindow: {
+          content: 'Big Ben is the nickname for the great bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower, officially named Elizabeth Tower.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.518856,
+        lng: -0.1263371,
+        title: 'British Museum',
+        infoWindow: {
+          content: 'The British Museum is a museum in London dedicated to human history and culture.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.5085822,
+        lng: -0.1283169,
+        title: 'National Gallery',
+        infoWindow: {
+          content: 'The National Gallery is an art museum on Trafalgar Square, London. Founded in 1824, it houses a collection of over 2,300 paintings dating from the mid-13th century to 1900.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 47.212933,
+        lng: -1.556652,
+        title: 'Madame Tussauds',
+        infoWindow: {
+          content: '<h3>Titre</h3><p>Go</p>'
+        }
+      });
+      bigMap.addMarker({
+        lat: 47.209172,
+        lng: -1.561571,
+        title: 'Passerelle Victor Schoelcher',
+        infoWindow: {
+          content: '<h3>Titre</h3><p>Go</p>'
+        }
+      });
+
+    /**
+    * Mini Map
+    */
+     var miniMap_01 = new GMaps({
+        div: '#mini-map_01',
+        lat: 47.212933,
+        lng: -1.556652,
+        zoom: 16,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+     var miniMap_02 = new GMaps({
+        div: '#mini-map_02',
+        lat: 47.209172,
+        lng: -1.561571,
+        zoom: 16,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+    });
+  </script>
+
+</body>
+
 </html>
