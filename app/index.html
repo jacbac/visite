@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en" ng-app="VisiteApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Anneaux de la Mémoire &middot; Visite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Template de visite de ville">
+  <meta name="author" content="Anneaux de la Mémoire, Jacques Bachelier">
+
+   <!-- Styles -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="ico/favicon.png">
+
+  <!-- Angular & Node JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+	
+<div class="container-narrow">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a href="#">Accueil</a></li>
+        <li><a href="#">A Propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <h3 class="muted">Projet Visite 0.1</h3>
+    </div>
+    <hr>
+    <div class="jumbotron">
+      <h1>Sur les traces de Nantes, port négrier</h1>
+      <p class="lead">Un iténaire témoin à travers l'architecture nantaise</p>
+    </div>
+    <hr>
+    <p>Sed ullamcorper consequat adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mauris nunc, hendrerit ultrices aliquet vitae, scelerisque eget dui. Duis dictum lacinia arcu iaculis varius. Aenean lobortis ultrices lorem ut suscipit. Nunc gravida ipsum eu mi mattis viverra. Nam a leo orci. Vivamus non erat at tellus vulputate tempus in et purus.</p>
+    <hr>
+  </div> <!-- /container-narrow -->
+
+  <div class="container">
+
+    <div class="map">
+      <div id="big-map" class="gmap-big"></div>
+    </div>
+
+		<div ng-view></div>
+
+    <hr>
+
+    <div class="footer">
+      <p>Test Co. 2013</p>
+    </div>
+
+  </div> <!-- /container -->
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsYVD-Nocke8NkyXK0KEKYESXlQump6Kk&sensor=false"></script>
+  <script src="js/vendor/gmap-0.3.2.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+    /**
+     * Big Intro Map with Pointers
+     */
+     var bigMap = new GMaps({
+        div: '#big-map',
+        lat: 47.212933,
+        lng: -1.556652,
+        zoom: 14,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+      bigMap.addMarker({
+        lat: 51.503324,
+        lng: -0.119543,
+        title: 'London Eye',
+        infoWindow: {
+          content: '<p>The London Eye is a giant Ferris wheel situated on the banks of the River Thames in London, England. The entire structure is 135 metres (443 ft) tall and the wheel has a diameter of 120 metres (394 ft).</p>'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.5007396,
+        lng: -0.1245299,
+        title: 'Big Ben',
+        infoWindow: {
+          content: 'Big Ben is the nickname for the great bell of the clock at the north end of the Palace of Westminster in London, and often extended to refer to the clock and the clock tower, officially named Elizabeth Tower.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.518856,
+        lng: -0.1263371,
+        title: 'British Museum',
+        infoWindow: {
+          content: 'The British Museum is a museum in London dedicated to human history and culture.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 51.5085822,
+        lng: -0.1283169,
+        title: 'National Gallery',
+        infoWindow: {
+          content: 'The National Gallery is an art museum on Trafalgar Square, London. Founded in 1824, it houses a collection of over 2,300 paintings dating from the mid-13th century to 1900.'
+        }
+      });
+      bigMap.addMarker({
+        lat: 47.212933,
+        lng: -1.556652,
+        title: 'Madame Tussauds',
+        infoWindow: {
+          content: '<h3>Titre</h3><p>Go</p>'
+        }
+      });
+      bigMap.addMarker({
+        lat: 47.209172,
+        lng: -1.561571,
+        title: 'Passerelle Victor Schoelcher',
+        infoWindow: {
+          content: '<h3>Titre</h3><p>Go</p>'
+        }
+      });
+
+    /**
+    * Mini Map
+    */
+     var miniMap_01 = new GMaps({
+        div: '#mini-map_01',
+        lat: 47.212933,
+        lng: -1.556652,
+        zoom: 16,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+     var miniMap_02 = new GMaps({
+        div: '#mini-map_02',
+        lat: 47.209172,
+        lng: -1.561571,
+        zoom: 16,
+        zoomControl : true,
+        zoomControlOpt: {
+          style : 'SMALL',
+          position: 'TOP_LEFT'
+        },
+        panControl : false,
+      });
+
+    });
+  </script>
+  	
+</body>
+</html>
