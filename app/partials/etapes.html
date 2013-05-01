@@ -9,22 +9,17 @@
       <div class="map">
         <div id="mini-map_0{{ etape.id }}" class="gmap-mini"></div>
       </div>
-      <ul>
-        <li ng-repeat="tag in etape.tags">
-          {{ tag }}
-        </li>
-      </ul>
     </div>
 
     <div class="span8">
+
       <ul>
-        <li ng-repeat="tag in etape.tags">{{ tag }}</li>
+        <li ng-repeat="actor in etape.actors">
+            <span>{{actor.name}}</span>
+            <span class="role">{{actor.role}}</span>
+        </li>
       </ul>
-      <ul>
-        <p ng-repeat="description in etape.descriptions">
-          {{ description.parag }}
-        </p>
-      </ul>
+      
       <img ng-src="/server/data/etapes_img/{{ etape.img }}" class="img-polaroid">
 
     </div>
