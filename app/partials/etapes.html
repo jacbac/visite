@@ -5,7 +5,7 @@
     <div class="span4">
       <h4>{{ etape.nom }}</h4>
       <p>{{ etape.quartier }} - {{ etape.adresse }}</p>
-      <p>Ligne {{ etape.transport.ligne }}</p>
+      <p>Ligne {{ etape.transport }}</p>
       <div class="map">
         <div id="mini-map_0{{ etape.id }}" class="gmap-mini"></div>
       </div>
@@ -13,11 +13,8 @@
 
     <div class="span8">
 
-      <ul>
-        <li ng-repeat="actor in etape.actors">
-            <span>{{actor.name}}</span>
-            <span class="role">{{actor.role}}</span>
-        </li>
+      <ul ng-repeat="description in etape.descriptions">
+          <li class="small">{{ description.id }} : {{ description.parag }}</li>
       </ul>
       
       <img ng-src="/server/data/etapes_img/{{ etape.img }}" class="img-polaroid">
